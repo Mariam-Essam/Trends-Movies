@@ -1,0 +1,32 @@
+@import 'color';
+@import 'mixin';
+
+.trends{
+    padding: 0;
+    margin: 0;
+    
+    .movie{
+        background-color: $cardBgColor;
+        transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+        border: $borderColor solid 1.5px;
+        @include boxShadow(3px, 3px, 10px, rgba(0, 0, 0, 1));
+    }
+    &{
+        background-color: $homeBgColor;
+    }
+    .movie:hover{
+        background:$hoverColor none repeat scroll 0 0;
+        transform: scale(1.06);
+        @include boxShadow(0px, 10px, 15px, rgba(255, 255, 250, 1));
+        border-radius: 3px;
+    }
+    .seemore{
+        cursor: pointer;
+        transition: all 1s;
+    }
+    .seemore:hover{
+        transform: scale(1.1);
+    }
+}
+

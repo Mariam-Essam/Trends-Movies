@@ -1,0 +1,19 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.navbar{
+    background-color: #343a40;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 1);
+}
+.navbar .nav-item .nav-link{
+    font-size: 20px;
+    margin-right: 15px;
+    border: none;
+    transition: all 1.5s;
+}
+.nav-link:hover{
+    color: #fed136!important;
+    transform: scale(1.09);;
+}

@@ -1,0 +1,38 @@
+<div class="trends py-5">
+    <div class="search mb-5 mx-5">
+        <div class="input-group">
+            <input type="text" class="form-control p-2" placeholder="Search by title" aria-label="Recipient's username" aria-describedby="basic-addon2" [(ngModel)]="searchTxt">
+            <div class="input-group-append">
+              <button class="btn btn-info px-3" type="button"><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="movies" *ngFor="let movie of allData|search:searchTxt" class="col-sm-6">
+                <div class="movie m-2 p-2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="p-1 m-1">
+                                    <img class="img-fluid" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="p-1 m-1">
+                                    <h3 class="text-center">{{movie.title}}</h3>
+                                    <div class="stars-rate">
+                                        <i *ngFor="let star of movie.voteStars" class="fas fa-star text-warning p-1" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="vote"><h5 class="pt-2">Vote Rate: {{movie.vote_average}}</h5></div>
+                                    <p class="d-inline movie-overview">{{movie.overview|seemore:170}}....</p>
+                                    <p class="seemore text-info py-0 my-0" click="seemoreFun">Seemore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
