@@ -4,8 +4,9 @@
   "scripts": {
     "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
+    "start":"node server.js",
+    "build": "ng build --prod",
+    "build_c": "ng build --prod && del \"../../server/front-end/*.*\" /s /q & xcopy /s dist \"../../server/front-end\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
