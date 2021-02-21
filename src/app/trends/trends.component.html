@@ -25,8 +25,14 @@
                                         <i *ngFor="let star of movie.voteStars" class="fas fa-star text-warning p-1" aria-hidden="true"></i>
                                     </div>
                                     <div class="vote"><h5 class="pt-2">Vote Rate: {{movie.vote_average}}</h5></div>
-                                    <p class="d-inline movie-overview">{{movie.overview|seemore:170}}....</p>
-                                    <p class="seemore text-info py-0 my-0" click="seemoreFun">Seemore</p>
+                                    <div *ngIf = "movie.flag">
+                                        <p class="d-inline movie-overview" id="movieOverview">{{movie.overview|seemore:70:movie}}</p>
+                                        <p class="d-inline seemore text-info py-0 my-0 mx-2" (click)="seemoreFun(movie)">See Less</p>
+                                    </div>
+                                    <div *ngIf = "!movie.flag">
+                                        <p class="d-inline movie-overview" id="movieOverview">{{movie.overview|seemore:70:movie}}</p>
+                                        <p class="d-inline seemore text-info py-0 my-0 mx-2" (click)="seemoreFun(movie)">... See More</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

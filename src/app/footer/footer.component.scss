@@ -1,10 +1,11 @@
+@import './../trends/color';
 *{
     padding: 0;
     margin:0;
 }
 /* ////////////////////////footer///////////////////////// */
 .footer-area {
-    background: #333333 none repeat scroll 0 0;
+    background: $homeBgColor none repeat scroll 0 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,55 +17,10 @@
     margin: 0;
   }
 .copy-right a{
-    color: #ff305b;
+    color: black;
     transition: all 0.3s ease-in-out;
   }
 .copy-right a:hover{
     text-decoration: none;
 }
-.accounts .account{
-    border-radius: 100%;
-    background-color: #09c;
-}
-.accounts .facebook{
-    background-color: transparent;
-    color: #4267B2;
-}
-.accounts .twitter{
-    background-color: transparent;
-    color: #1DA1F2;
-}
-.accounts .instagram{
-    background-color: transparent;
-    color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
-}
-.fa-facebook-f{
-    color: #4267B2;
-}
-.fa-twitter{
-    color: #1DA1F2;
-}
-.fa-instagram{
-  position: relative;
-  width: 36px;
-  border-radius: 20%;
-  background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf)
-}
-.fa-instagram:after,
-.fa-instagram:before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 25px;
-  border: 2px solid #fff;
-  transform: translate(-50%, -50%);
-  content: ''
-}
-.fa-instagram:before {
-  border-radius: 20%
-}
-.fa-instagram:after {
-  width: 11px;
-  height: 11px;
-  border-radius: 50%
-}
+

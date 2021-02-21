@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SeemorePipe implements PipeTransform {
 
-  transform(movieOverview:string, limit:number): string {
-    return movieOverview.substr(0,limit);
+  transform(movieOverview:string, limit:number, movie:any): string {
+    console.log(movie.flag)
+    if(!movie.flag){
+      return movieOverview.substr(0,limit);
+    }
+    else{ 
+      return movieOverview;
+    }
   }
-
 }
